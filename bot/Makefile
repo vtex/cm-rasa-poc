@@ -2,7 +2,7 @@
 
 ## FLAGS:
 # TODO: This is a hotfix while RASA don't solve dependencies issues.
-PIP_FLAGS = --use-deprecated=legacy-resolver 
+PIP_FLAGS = --use-deprecated=legacy-resolver
 LOG_LEVEL = -v
 RASA_ENDPOINTS = --endpoints endpoints.yml
 RASA_CREDENTIALS = --credentials credentials.yml
@@ -74,7 +74,7 @@ webchat:
 		$(LOG_LEVEL) 		\
 		$(RASA_ENDPOINTS)	\
 		$(RASA_CREDENTIALS)	\
-		--port 5007 
+		--port 5007
 
 api:
 	rasa run 				\
@@ -93,7 +93,7 @@ rocket:
 		$(RASA_ENDPOINTS)	\
 		$(RASA_CREDENTIALS)	\
 		--cors '*' 			\
-		--port 5005 
+		--port 5005
 
 
 # ACTIONS
