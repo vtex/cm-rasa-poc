@@ -1,6 +1,6 @@
 # Summary
 
-* [Introdução](README.md)
+* [Introdução](docs/README.md)
 * [Qualidade do bot](docs/pipeline-de-qualidade.md)
 
 * [Tutoriais]()
@@ -23,4 +23,3 @@
 
 * [English]()
     * [Introduction](docs/README-en.md)
-
