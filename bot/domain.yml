@@ -28,6 +28,7 @@ intents:
 - objetivo
 - cancelar
 - feedback
+- start_shopping
 entities:
 - sentimento
 - religiao
@@ -81,7 +82,7 @@ responses:
   - text: |
       Eu posso falar de assuntos simples, como por exemplo "qual é o seu filme favorito?"
 
-      Tem alguns assuntos que eu também ainda não domino, 
+      Tem alguns assuntos que eu também ainda não domino,
       mas vou deixar você descobrir o que eu sei responder.
 
       E, aí do que podemos conversar?
@@ -139,7 +140,7 @@ responses:
       É pra já!!!
 
       Tenho uma enxada, uma pá e uma foice.
-        
+
       Quantas ferramentas eu tenho?
 
       ...
@@ -248,7 +249,7 @@ responses:
       Mas sempre os androids acabavam dormindo e sonhando com ovelhas eletricas =x
   utter_risada:
   - text: |
-      Hahahaha... 
+      Hahahaha...
 
       Engraçadinho
   - text: |
@@ -270,6 +271,15 @@ responses:
   - text: Muito obrigado pelo seu feedback! Crescer é escutar e evoluir
   - text: Obrigado pelo feedback, vou tentar melhorar cada vez mais
   - text: Valeu pelo feedback, quanto mais a gente rala mais a gente cresce
+  utter_ask_for_order:
+  - text: |
+    Bem vindo a ZonaSul! Aqui você vai fazer a sua compra rapidamente com a gente.
+    Digite sua lista de compras, um item por linha! Exemplo:
+      5 Cebobas
+      1l de leite de soja
+      5kg de feijão
+      1kg de arroz
+      1l Suco de Laranja
 actions:
 - action_teste
 forms:

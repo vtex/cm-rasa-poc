@@ -368,3 +368,9 @@ nlu:
     - nada de mais
     - foi normal a conversa
     - nem fede e nem cheira
+- intent: start_shopping
+  examples: |
+    - Quero fazer um pedido
+    - pedido de supermecado
+    - escrever minha lista de pedidos
+    - quero fazer compra
