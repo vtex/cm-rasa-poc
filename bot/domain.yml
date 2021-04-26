@@ -272,9 +272,9 @@ responses:
   - text: Obrigado pelo feedback, vou tentar melhorar cada vez mais
   - text: Valeu pelo feedback, quanto mais a gente rala mais a gente cresce
   utter_ask_for_order:
-  - text: |
-    Bem vindo a ZonaSul! Aqui você vai fazer a sua compra rapidamente com a gente.
-    Digite sua lista de compras, um item por linha! Exemplo:
+  - text: |-
+      Bem vindo a ZonaSul! Aqui você vai fazer a sua compra rapidamente com a gente.
+      Digite sua lista de compras, um item por linha! Exemplo:
       5 Cebobas
       1l de leite de soja
       5kg de feijão
