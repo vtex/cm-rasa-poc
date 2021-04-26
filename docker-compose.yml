@@ -184,12 +184,28 @@ services:
       volumes:
         - ./bot/:/bot/
       env_file:
-        - env/bot-telegram.env
+        - env/bots.env
       ports:
         - 5001:5001
       depends_on:
         - actions
       command: sh -c "make telegram"
+
+  # ============================ Twilio Bot =================================
+  # Specific Rasa bot integrated with Twilio.
+  bot_twilio:
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      volumes:
+        - ./bot/:/bot/
+      env_file:
+        - env/bots.env
+      ports:
+        - 5002:5002
+      depends_on:
+        - actions
+      command: sh -c "make twilio"
 
   # =============================== Notebooks =================================
   # Rasa lab to enhance hyperparameters.

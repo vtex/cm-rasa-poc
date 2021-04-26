@@ -68,6 +68,14 @@ telegram:
 		$(RASA_CREDENTIALS)	\
 		--port 5001 		\
 
+twilio:
+	rasa run 				\
+		-m models/ 			\
+		$(LOG_LEVEL) 		\
+		$(RASA_ENDPOINTS)	\
+		$(RASA_CREDENTIALS)	\
+		--port 5002 		\
+
 webchat:
 	rasa run 				\
 		-m models/ 			\

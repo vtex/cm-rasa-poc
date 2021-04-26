@@ -114,6 +114,14 @@ run-telegram:
 		bot_telegram \
 		make telegram
 
+run-twilio:
+	docker-compose run \
+		-d \
+		--rm \
+		--service-ports \
+		bot_twilio \
+		make twilio
+
 run-notebooks:
 	docker-compose up \
 		-d notebooks
@@ -147,4 +155,3 @@ run-test-core:
 		--rm \
 		bot \
 		make test-core
-
