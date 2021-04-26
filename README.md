@@ -12,7 +12,10 @@ Read the [boilerplate's README](docs/README.md) for more information on how to r
 
 ##  How to run and Demo video
 
-TODO
+This is not the final video, just one showing the dev flow to add a story and train a model:
+https://www.loom.com/share/a7ac3a1ad9734dfa94844209924e9169
+
+Install the [Loom for Chrome Extension](https://www.loom.com/blog/loom-github-chrome-extension-integration) to see the video embeded.
 
 ## Notes
 
