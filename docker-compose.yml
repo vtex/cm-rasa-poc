@@ -25,6 +25,8 @@ services:
       - 5006:5006
       - 5004:5004
       - 5005:5005
+    env_file:
+      - env/bots.env
     depends_on:
       - actions
 

@@ -4,7 +4,7 @@ positivo:
  - amei demais
  - foi muito util
  - melhor bot
- - gostei 
+ - gostei
  - você é muito educado
  - voce e muito educado
  - me ajudou muito
@@ -22,6 +22,7 @@ positivo:
  - amei voce
  - adorei vc
  - amei vc
+ - foi bem rápido!
 negativo:
  - não
  - nao
@@ -46,6 +47,9 @@ negativo:
  - Sai disso
  - Me tira daqui
  - Para com isso
+ - você não entende
+ - não estou conseguindo fazer pedido
+ - não está dando certo
 neutro:
  - tanto faz
  - irrelevante pra mim
@@ -55,3 +59,4 @@ neutro:
  - foi normal a conversa
  - nada de mais
  - nem fede e nem cheira
+ - mais ou menos

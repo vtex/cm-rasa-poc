@@ -11,26 +11,13 @@ nlu:
 - intent: despedir
   examples: |
     - tchau
+    - xau
     - adeus
     - flw
     - Até mais, bot
-- intent: religiao
-  examples: |
-    - voce acredita em [deus](religiao)
-    - [deus](religiao) existe
-    - voce e [catolico protestante](religiao)
-    - voce tem [religiao](religiao)
-    - voce e [mussumano](religiao)
-    - [evengelico](religiao)
-    - voce e [crente](religiao)
-    - voce é [católico](religiao)
-    - voce é [ateu](religiao)
-    - você é espírita
-    - voce e espirita
-    - você é religioso
-    - qual é o seu deus?
-    - qual a sua [religião](religiao)?
-    - você acredita em alguma [religião](religiao)?
+    - bye
+    - sair
+    - inté
 - intent: time
   examples: |
     - qual o melhor time do brasil
@@ -368,9 +355,23 @@ nlu:
     - nada de mais
     - foi normal a conversa
     - nem fede e nem cheira
+    - não tá funcionando
 - intent: start_shopping
   examples: |
     - Quero fazer um pedido
-    - pedido de supermecado
+    - pedido de supermercado
+    - vou fazer mercado
     - escrever minha lista de pedidos
     - quero fazer compra
+    - Como faço para pedir
+- intent: delivery_question
+  examples: |
+    - vocês entregam?
+    - vai chegar a compra hoje?
+- intent: product_list
+  examples: |
+    - 5 [Cebolas]{"entity": "produto"}
+    - 1L [Leite de Coco]{"entity": "produto"}
+    - 5kg de [Feijão]{"entity": "produto"}
+    - 1kg de [Arroz]{"entity": "produto"}
+    - 1L Suco de [Laranja]{"entity": "produto"}

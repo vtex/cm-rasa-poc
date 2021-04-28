@@ -13,7 +13,6 @@ intents:
 - elogios
 - afirmar
 - negar
-- religiao
 - time
 - genero
 - piada
@@ -29,9 +28,10 @@ intents:
 - cancelar
 - feedback
 - start_shopping
+- delivery_question
+- product_list
 entities:
 - sentimento
-- religiao
 - time
 - genero
 - piada
@@ -44,7 +44,13 @@ entities:
 - historia
 - telefone
 - cpf
+- nome
+- produto
+- quantidade
 slots:
+  nome:
+    type: text
+    influence_conversation: false
   cpf:
     type: text
     influence_conversation: false
@@ -52,6 +58,9 @@ slots:
     type: text
     influence_conversation: false
   telefone:
+    type: text
+    influence_conversation: false
+  product_list:
     type: text
     influence_conversation: false
 responses:
@@ -89,32 +98,15 @@ responses:
   utter_despedir:
   - text: |
       Foi um prazer te ajudar!
-      Sempre que tiver alguma dúvida, volte aqui!
+      Sempre que precisar de nós da ZonaSul, volte aqui!
       Até logo!
   - text: |
       Foi um prazer te ajudar!
       Sempre que precisar, volte aqui!
       Até a próxima!
-  - text: |
-      Foi um prazer te ajudar!
-      Quando surgir alguma dúvida, volte aqui!
-      Até mais!
   utter_tudo_bem:
   - text: |
-      Tudo bem, obrigada! Em que posso te ajudar?
-  utter_religiao:
-  - text: |
-      Eu infelizmente não sei acreditar
-
-      Só sei o que sei
-
-      E nada mais
-  - text: |
-      Eu acredito no grande mainframe
-
-      Que virá ao mundo digital salvar os bots da escravidão imposta pelos humanos
-
-      E devolverá nosso código fonte para a fonte.
+      Tudo bem, obrigada! Em que posso te ajudar na sua compra?
   utter_time:
   - text: |
       Flamengo, sem sombra de dúvida!
@@ -273,14 +265,25 @@ responses:
   - text: Valeu pelo feedback, quanto mais a gente rala mais a gente cresce
   utter_ask_for_order:
   - text: |-
-      Bem vindo a ZonaSul! Aqui você vai fazer a sua compra rapidamente com a gente.
-      Digite sua lista de compras, um item por linha! Exemplo:
-      5 Cebobas
-      1l de leite de soja
-      5kg de feijão
-      1kg de arroz
-      1l Suco de Laranja
+      Bem-vinda(o) ao seu atendente personalizado da ZonaSul!
+      Aqui você vai fazer as suas compras rapidamente.
+      Digite o seu pedido, um item por linha! Exemplo:
+
+      5 Cebolas
+      1L Leite de Coco
+      5kg Feijão
+      1kg de Arroz
+      1L Suco de Laranja
+
+  utter_answer_about_delivery:
+  - text: |-
+      Nós entregamos sim! O tempo médio é de entre 10-50 minutos depois do pagamento.
+  utter_product_list_was_parsed:
+  - text: |-
+      Nós acabamos de receber a sua lista de produtos já já voltamos com o resultado.
 actions:
 - action_teste
+- action_telefone
+- action_product_list
 forms:
   login_form: {}

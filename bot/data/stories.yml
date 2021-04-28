@@ -8,11 +8,6 @@ stories:
   steps:
   - intent: despedir
   - action: utter_despedir
-- story: path_religiao
-  steps:
-  - intent: religiao
-  - action: utter_religiao
-  - action: utter_continuar_conversa
 - story: path_time
   steps:
   - intent: time
@@ -117,3 +112,11 @@ stories:
   steps:
   - intent: start_shopping
   - action: utter_ask_for_order
+- story: ask_delivery_question
+  steps:
+  - intent: delivery_question
+  - action: utter_answer_about_delivery
+- story: ordering_product_list
+  steps:
+  - intent: product_list
+  - action: utter_product_list_was_parsed
