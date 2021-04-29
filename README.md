@@ -79,6 +79,9 @@ Get the ngrok url and paste it on the [twilio console](https://console.twilio.co
 
 Webhook URL looks like this: https://<temp_subdomain>.ngrok.io/webhooks/twilio/webhook
 
+If you want to try out the sandbox already set up, message 'join promised-cowboy' to +1 415 523 8886 on WA.
+
+
 ### Video showing training of a model locally
 
 This is not the final video, just one showing the dev flow to add a story and train a model:
