@@ -29,6 +29,43 @@ terraform validate
 terraform apply
 ```
 
+To show the instance created and running:
+
+```
+aws ec2 describe-instances --filters "Name=tag:Name,Values=rasa-model-training" "Name=instance-state-name,Values=running"  --query "Reservations[*].Instances[*].InstanceId" --output text
+```
+
+Connected to the VPN and with vtexcommerce.pem go into the instance and set up the environment:
+
+```
+ssh -i "vtexcommerce.pem" ubuntu@<Public_IPV4_address>
+
+# Install Docker compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Pull the github repo
+git clone https://github.com/vtex/cm-rasa-poc.git
+
+# Fill env variables in bots env file
+vim env/bots.env
+
+make build
+make train
+```
+
+You should see the new model trained in models/ and published to this s3 bucket.
+
+From your local machine you can pull the model created
+```
+scp -r -i vtexcommerce.pem ubuntu@172.16.150.145:~/cm-rasa-poc/bot/models ~/projects/vtex/cm-rasa-poc/bot
+```
+
+To kill the instance after you are done:
+```
+aws ec2 terminate-instances --instance-ids <InstanceId>
+```
+
 ### Video showing training of a model locally
 
 This is not the final video, just one showing the dev flow to add a story and train a model:
@@ -45,6 +82,7 @@ Install the [Loom for Chrome Extension](https://www.loom.com/blog/loom-github-ch
 
 ### Future TODO
 - Create a data training pipeline to get some training samples
+- Productionize the publishing of models for this prototype (ie, send to s3)
 - Abstract away the story flow component into React components state machine outside this repp
 - Move the bot hub from endpoitn from running on this POC to a javacript webhook so we can connect to vtex io / storefront
 - Change RabbitMQ to Redis Stream
