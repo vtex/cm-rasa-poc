@@ -66,6 +66,19 @@ To kill the instance after you are done:
 aws ec2 terminate-instances --instance-ids <InstanceId>
 ```
 
+### Running the Twilio Bot to connect to Twilio Sandbox
+
+After the model is trained, I am running the server twilio is talking to as a webhook as such:
+
+```
+make run-twilio
+ngrok http 5002
+```
+
+Get the ngrok url and paste it on the [twilio console](https://console.twilio.com/?frameUrl=/console/sms/whatsapp/sandbox)](https://console.twilio.com/?frameUrl=/console/sms/whatsapp/sandbox).
+
+Webhook URL looks like this: https://<temp_subdomain>.ngrok.io/webhooks/twilio/webhook
+
 ### Video showing training of a model locally
 
 This is not the final video, just one showing the dev flow to add a story and train a model:
