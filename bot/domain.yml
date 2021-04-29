@@ -45,8 +45,8 @@ entities:
 - telefone
 - cpf
 - nome
-- produto
-- quantidade
+- product
+- quantity
 slots:
   nome:
     type: text
