@@ -368,6 +368,7 @@ nlu:
   examples: |
     - vocês entregam?
     - vai chegar a compra hoje?
+    - quero pedir para casa
 - intent: product_list
   examples: |
     - [5]{"entity": "quantity", "group": "1"} [Cebolas]{"entity": "product", "group": "1"}
