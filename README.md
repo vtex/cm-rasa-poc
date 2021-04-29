@@ -71,6 +71,8 @@ aws ec2 terminate-instances --instance-ids <InstanceId>
 After the model is trained, I am running the server twilio is talking to as a webhook as such:
 
 ```
+make build
+make build-analytics
 make run-twilio
 ngrok http 5002
 ```

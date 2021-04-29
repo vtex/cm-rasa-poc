@@ -370,8 +370,9 @@ nlu:
     - vai chegar a compra hoje?
 - intent: product_list
   examples: |
-    - 5 [Cebolas]{"entity": "produto"}
-    - 1L [Leite de Coco]{"entity": "produto"}
-    - 5kg de [Feijão]{"entity": "produto"}
-    - 1kg de [Arroz]{"entity": "produto"}
-    - 1L Suco de [Laranja]{"entity": "produto"}
+    - [5]{"entity": "quantity", "group": "1"} [Cebolas]{"entity": "product", "group": "1"}
+    - [1L]{"entity": "quantity", "group": "1"} [Leite de Coco]{"entity": "product", "group": "1"}
+    - [5kg]{"entity": "quantity", "group": "1"} de [Feijão]{"entity": "product", "group": "1"}
+    - [1kg]{"entity": "quantity", "group": "1"} de [Arroz]{"entity": "product", "group": "1"}
+    - [1L]{"entity": "quantity", "group": "1"} Suco de [Laranja]{"entity": "product", "group": "1"}
+    - quero pedir [5]{"entity": "quantity", "group": "1"} [cebolas]{"entity": "product", "group": "1"}, [1l]{"entity": "quantity", "group": "2"} de [leite de coco]{"entity": "product", "group": "2"}, [5kg]{"entity": "quantity", "group": "3"} de [feijão]{"entity": "product", "group": "3"}
