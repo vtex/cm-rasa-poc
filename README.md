@@ -22,8 +22,21 @@ on the models.
 1. [Follow this guide](https://www.notion.so/marjorivtex/How-to-get-AWS-access-2e71b217c52d49369ce8bc86b6ec8109) to get access to AWS and VPN.
 2. Install [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/aws-build) and [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
 
+After running the steps on the AWS access / VPN doc, you have to make sure your `~/.aws/credentials` file is configured with this format:
+
 ```
-aws configure
+[default]
+aws_access_key_id=ID
+aws_secret_access_key=KEY
+aws_session_token=TOKEN
+
+[PROFILE_SWE]
+aws_access_key_id=ID
+aws_secret_access_key=KEY
+aws_session_token=TOKEN
+```
+
+```
 terraform init
 terraform validate
 terraform apply
