@@ -33,16 +33,11 @@ class ActionProductList(Action):
         # TODO: query VTEX's product list database to match the products
         # with what the user has ordered
 
-        # vtex_store = os.getenv('VTEX_STORE')
-        # vtex_store_api_key = os.environ.get('VTEX_STORE_API_KEY')
-        # vtex_store_api_token = os.environ.get('VTEX_STORE_API_TOKEN')
-
         entities = tracker.latest_message["entities"]
         logger.info(f"Extracted entities: {pformat(entities)}")
 
         message = "Lista de produtos: "
         current_group = 1
-
         for current_group in range(1, len(entities)):
             logger.info(f"Loop {current_group}")
 
