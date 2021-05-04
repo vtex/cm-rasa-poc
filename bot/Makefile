@@ -60,6 +60,12 @@ shell:
 		$(RASA_ENDPOINTS)	\
 		--port 5006
 
+# SHELL NLU
+shell-nlu:
+	rasa shell nlu				\
+		-m models/ 			\
+		$(LOG_LEVEL)
+
 telegram:
 	rasa run 				\
 		-m models/ 			\
@@ -75,6 +81,15 @@ twilio:
 		$(RASA_ENDPOINTS)	\
 		$(RASA_CREDENTIALS)	\
 		--port 5002 		\
+
+nlu:
+	rasa run 				\
+	  --enable-api  \
+		-m models/ 			\
+		$(LOG_LEVEL) 		\
+		$(RASA_ENDPOINTS)	\
+		$(RASA_CREDENTIALS)	\
+		--port 5003 		\
 
 webchat:
 	rasa run 				\

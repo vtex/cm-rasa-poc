@@ -11,6 +11,16 @@ services:
       - ./bot/models/:/bot/models/
     command: "make train"
 
+  # =============================== Coach =================================
+  # Only NLU models are trained by this coach.
+  coach_nlu:
+    build:
+      context: .
+      dockerfile: ./docker/bot.Dockerfile
+    volumes:
+      - ./bot/models/:/bot/models/
+    command: "make train-nlu"
+
 
   # ================================= Bot =====================================
   # Generic Rasa bot, used to run console for example.
@@ -208,6 +218,20 @@ services:
       depends_on:
         - actions
       command: sh -c "make twilio"
+
+  # ============================ NLU Server =================================
+  # NLU-only RASA Server
+  nlu_only:
+      build:
+        context: .
+        dockerfile: ./docker/bot.Dockerfile
+      volumes:
+        - ./bot/:/bot/
+      env_file:
+        - env/bots.env
+      ports:
+        - 5003:5003
+      command: sh -c "make nlu"
 
   # =============================== Notebooks =================================
   # Rasa lab to enhance hyperparameters.
