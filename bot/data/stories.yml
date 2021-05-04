@@ -119,4 +119,4 @@ stories:
 - story: ordering_product_list
   steps:
   - intent: product_list
-  - action: utter_product_list_was_parsed
+  - action: action_product_list
