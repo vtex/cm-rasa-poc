@@ -73,6 +73,13 @@ run-shell:
 		bot \
 		make shell
 
+run-shell-nlu:
+	docker-compose run \
+		--rm \
+		--service-ports \
+		bot \
+		make shell-nlu
+
 run-api:
 	docker-compose run \
 		--rm \
@@ -122,6 +129,14 @@ run-twilio:
 		bot_twilio \
 		make twilio
 
+run-nlu:
+	docker-compose run \
+		-d \
+		--rm \
+		--service-ports \
+		nlu_only \
+		make nlu
+
 run-notebooks:
 	docker-compose up \
 		-d notebooks
@@ -137,6 +152,11 @@ train:
 	mkdir -p bot/models
 	docker-compose up \
 		--build coach
+
+train-nlu:
+	mkdir -p bot/models
+	docker-compose up \
+		--build coach_nlu
 
 ############################## TESTS ##############################
 test:
