@@ -1,3 +1,5 @@
+**This repo is now frozen and moved to [conversational-commerce](https://github.com/vtex/conversational-commerce) monorepo.**
+
 # Conversational Commerce RASA POC
 
 This is showing based off of a open source [boilerplate chatbot project](https://github.com/lappis-unb/rasa-ptbr-boilerplate/issues) developed at UnB's Lappis lab.
